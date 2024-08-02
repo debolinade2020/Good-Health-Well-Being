@@ -18,21 +18,21 @@ document.getElementById('bmi-form').addEventListener('submit', function(event) {
     if (bmi < 18.5) {
         category = 'Underweight';
         weightChange = 18.5 * (height * height) - weight;
-        suggestion = `You may need to gain at least ${weightChange.toFixed(2)} kg to reach a Normal Weight.`;
+        suggestion = You may need to gain at least ${weightChange.toFixed(2)} kg to reach a Normal Weight.;
     } else if (bmi >= 18.5 && bmi < 24.9) {
         category = 'Normal weight';
         suggestion = 'You are at a healthy weight.';
     } else if (bmi >= 25 && bmi < 29.9) {
         category = 'Overweight';
         weightChange = weight - 24.9 * (height * height);
-        suggestion = `You may need to lose at least ${weightChange.toFixed(2)} kg to reach a Normal Weight.`;
+        suggestion = You may need to lose at least ${weightChange.toFixed(2)} kg to reach a Normal Weight.;
     } else {
         category = 'Obese';
         weightChange = weight - 24.9 * (height * height);
-        suggestion = `You may need to lose at least ${weightChange.toFixed(2)} kg to reach a Normal Weight.`;
+        suggestion = You may need to lose at least ${weightChange.toFixed(2)} kg to reach a Normal Weight.;
     }
 
-    document.getElementById('bmi-result').innerText = `Your BMI is ${bmi.toFixed(2)} (${category}). ${suggestion}`;
+    document.getElementById('bmi-result').innerText = Your BMI is ${bmi.toFixed(2)} (${category}). ${suggestion};
 });
 
 // Pedometer
@@ -62,7 +62,7 @@ document.getElementById('calorie-form').addEventListener('submit', function(even
 
     let totalCalories = parseInt(localStorage.getItem('totalCalories') || '0') + calories;
     localStorage.setItem('totalCalories', totalCalories);
-    document.getElementById('calorie-result').innerText = `Total Calories Consumed Today: ${totalCalories}`;
+    document.getElementById('calorie-result').innerText = Total Calories Consumed Today: ${totalCalories};
 });
 
 // Sleep Tracker
@@ -76,7 +76,7 @@ document.getElementById('sleep-form').addEventListener('submit', function(event)
         return;
     }
 
-    document.getElementById('sleep-result').innerText = `You have logged ${sleep} hours of sleep.`;
+    document.getElementById('sleep-result').innerText = You have logged ${sleep} hours of sleep.;
 });
 // Example user data storage (you would replace this with actual database interactions)
 const userData = {
